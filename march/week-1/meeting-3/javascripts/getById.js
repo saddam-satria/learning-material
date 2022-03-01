@@ -1,3 +1,1 @@
-const rootID = document.getElementById('root');
-
-console.log(rootID);
+export const rootID = document.getElementById('root');
