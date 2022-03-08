@@ -1,0 +1,47 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--primary);
+}
+
+:root {
+  --primary: #130f40;
+  --secondary: #ffec78;
+  --third: #fef8fd;
+}
+
+.container {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.header {
+  margin-top: 1rem;
+}
+
+.button-screen {
+  padding: 10px 0px;
+}
+
+.button {
+  background-color: var(--secondary);
+  border: none;
+  padding: 8px 25px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.content {
+  padding: 20px 0px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
