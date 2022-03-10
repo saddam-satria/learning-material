@@ -1,0 +1,169 @@
+:root {
+  --primary: #f1f5f8;
+  --secondary: #e9eef2;
+  --button-primary: #ee5253;
+  --main: #172126;
+  --poppins: 'Poppins', sans-serif;
+  --montserrat: 'Montserrat', sans-serif;
+  --ubuntu: 'Ubuntu', sans-serif;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: var(--primary);
+}
+
+.container {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.wrapper {
+  margin: 50px 0px;
+  background-color: var(--secondary);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex: 20%;
+  color: var(--main);
+  text-decoration: none;
+}
+.title img {
+  margin-right: 24px;
+}
+
+.title h1 {
+  font-family: var(--poppins);
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.navbar-nav {
+  flex: 80%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+}
+
+.nav-item {
+  margin-right: 53px;
+  list-style: none;
+}
+
+.nav-item a {
+  font-family: var(--poppins);
+  text-decoration: none;
+  color: var(--main);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.burger {
+  padding: 2px 0.7rem;
+  margin-top: 2px;
+  background-color: var(--button-primary);
+}
+
+.navbar-nav.active {
+  transform: translateX(0);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding-top: 40px;
+}
+
+.content-image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.content-image img {
+  min-width: 260px;
+  object-fit: cover;
+}
+
+.content-title {
+  margin-bottom: 2rem;
+}
+
+.content-title h4 {
+  font-family: var(--ubuntu);
+  color: var(--main);
+  max-width: 402px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.content-title a {
+  text-decoration: none;
+  padding: 10px 60px;
+  background-color: var(--button-primary);
+  color: var(--secondary);
+  font-family: var(--montserrat);
+  border-radius: 25px;
+}
+
+.content h4 span {
+  color: var(--button-primary);
+}
+
+@media (max-width: 538px) {
+  .title h1 {
+    font-size: 22px;
+  }
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .navbar {
+    align-items: center;
+  }
+  .navbar-nav {
+    width: 40%;
+    margin-top: -1px;
+    background-color: var(--secondary);
+    transform: translateX(-100%);
+    height: 100vh;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    justify-content: center;
+  }
+  .nav-item {
+    margin-top: 1.4rem;
+  }
+  .content-image {
+    order: 1;
+    justify-content: center;
+  }
+  .content-title {
+    order: 2;
+  }
+
+  .content-title h4 {
+    width: 100%;
+    font-size: 22px;
+  }
+
+  .content-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+  }
+}
